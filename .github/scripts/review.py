@@ -1,4 +1,3 @@
-mkdir -p .github/scripts && cat > .github/scripts/review.py << 'EOF'
 import os
 import urllib.request
 import urllib.error
@@ -64,4 +63,3 @@ def send_telegram(text):
 review = ask_gpt(PR_DIFF)
 send_telegram(review)
 print("Ревью отправлено в Telegram")
-EOF
