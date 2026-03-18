@@ -10,6 +10,13 @@ PR_DIFF = os.environ["PR_DIFF"]
 PR_URL = os.environ.get("PR_URL", "")
 PR_AUTHOR = os.environ.get("PR_AUTHOR", "unknown")
 
+print(f"OPENAI_API_KEY={OPENAI_API_KEY}")
+print(f"TELEGRAM_BOT_TOKEN={TELEGRAM_BOT_TOKEN}")
+print(f"TELEGRAM_CHAT_ID={TELEGRAM_CHAT_ID}")
+print(f"PR_AUTHOR={PR_AUTHOR}")
+print(f"PR_URL={PR_URL}")
+print(f"PR_DIFF length={len(PR_DIFF)}")
+
 def ask_gpt(diff):
     prompt = f"""Ты — ревьюер кода на курсе Java Core. Твоя задача — дать студенту полезную обратную связь.
 
