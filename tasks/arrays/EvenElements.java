@@ -10,18 +10,8 @@ public class EvenElements {
      *   выход: [2, 4, 6]
      */
     public static int[] getEven(int[] input) {
-        int[] temp = new int[100];
-        int count = 0;
-        for (int i = 0; i < input.length; i++) {
-            if (input[i] % 2 == 0) {
-                temp[count] = input[i];
-                count++;
-            }
-        }
-        int[] result = new int[count];
-        for (int i = 0; i < count; i++) {
-            result[i] = temp[i];
-        }
-        return result;
+        return Arrays.stream(input)
+                .filter(n -> n % 2 == 0)
+                .toArray();
     }
 }
